@@ -26,7 +26,7 @@ const useGetDetailsInfo = () => {
     const { address, description, payMethod } = stepOneformValues;
     let text = "";
     const productsText = productSelected.reduce((text, prod) => {
-      return (text += `${prod.count} ${prod.nombre}.`);
+      return (text += `${prod.count} ${prod.nombre}.\n`);
     }, "\n");
 
     text += `Buenas, quisiera ordenar por favor:\n\n  ${productsText}\n\nMétodo de pago: ${payMethod}.\nDirección: ${address}.\nDescripción: ${description}.`;
