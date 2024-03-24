@@ -26,15 +26,15 @@ export const PlanFinishinDetail = () => {
       <SC.OrderDescription >
         <span>
           <strong>Método de pago: </strong>
-          {payMethod}
+          {payMethod}.
         </span>
         <span>
           <strong>Dirección: </strong>
-          {address}
+          {address}.
         </span>
         <span>
           <strong>Descripción: </strong>
-          {description}
+          {description}.
         </span>
       </SC.OrderDescription>
       <Link href="/catalogo" onClick={() => dispatch(editProductOrder())}>
