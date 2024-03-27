@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins ,Edu_NSW_ACT_Foundation} from "next/font/google";
 import * as SC from "../styled-components/styles"
 import "./globals.css";
 import { SideBarLayout } from "@/components/SideBarLayout";
 import { FooterOptions } from "@/components/FooterOptions";
-const poppins = Poppins({ subsets: ["latin"] ,weight:["200","400","600","900"]});
+const edunsw = Edu_NSW_ACT_Foundation({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Catalogo de productos",
-  description: "Aquí podras encontrar todo el catalogo de productos que necesites",
+  title: "Amarilla - catalogo",
+  description:
+    "Aquí podras encontrar todo el catalogo de amarilla, hecho con mucho amor",
+  keywords: ["amarilla", "arcilla", "joyeros", "ceniceros", "porta incienso"],
 };
 
 export default function RootLayout({
@@ -18,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={poppins.className}>
+      <body className={edunsw.className}>
         <SC.MainLayout>
           <SideBarLayout>
             <SC.FormLayout isFinished={false}>

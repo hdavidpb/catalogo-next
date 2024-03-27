@@ -7,6 +7,7 @@ import { Button } from "@/styled-components/Button";
 import * as SC from "../styled-components/styles";
 import { usePathname, useRouter } from "next/navigation";
 import { isDisabledButton } from "@/utils/getValidateButton";
+import { RiWhatsappFill } from "react-icons/ri";
 export const FooterOptions = () => {
   const { state } = useContext(stepsContext);
   const { wappText } = state;
@@ -26,19 +27,37 @@ export const FooterOptions = () => {
   };
   return (
     <SC.FooterOptions>
-      <Button
-        disabled={isDisabledButton(
-          //@ts-ignore
-          pathName,
-          state.productSelected,
-          state.stepOneformValues.address,
-          state.stepOneformValues.payMethod
-        )}
-        onClick={handleClick}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "2px",
+        }}
       >
-        {/*@ts-ignore */}
-        {pathName !== "/finalizar-orden"? "Siguiente":"Ordenar"}
-      </Button>
+        <Button
+          disabled={isDisabledButton(
+            //@ts-ignore
+            pathName,
+            state.productSelected,
+            state.stepOneformValues.address,
+            state.stepOneformValues.payMethod
+          )}
+          onClick={handleClick}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "8px",
+          }}
+        >
+          {/*@ts-ignore */}
+          {pathName !== "/finalizar-orden" ? "Siguiente" : "Ordenar"}
+          {pathName === "/finalizar-orden" && (
+            <RiWhatsappFill color="white" size={16} />
+          )}
+        </Button>
+      </div>
     </SC.FooterOptions>
   );
 };

@@ -158,7 +158,7 @@ export const FormLayout = styled.div`
     height: 85%;
     flex: 0;
     width: 98%;
-    padding: 20px 10px;
+    padding: 20px  5px;
     background-color: ${theme.neutral.white};
     border-radius: 10px;
     top: 10%;
@@ -282,9 +282,9 @@ export const CardsContainer = styled.div`
   @media (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 `;
 
 interface ProductCardProps {
