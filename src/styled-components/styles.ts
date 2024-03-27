@@ -1,6 +1,7 @@
 'use client'
 
 import { theme } from "@/theme/theme";
+import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
 
@@ -66,7 +67,7 @@ export const SideStepContainer = styled.div`
       no-repeat center;
     background-size: 100%;
     background-position: inherit;
-    padding-top: 9px;
+    padding-top: 19px;
   }
 `;
 
@@ -105,6 +106,11 @@ export const StepContainer = styled.div`
   @media (max-width: 600px) {
     width: auto;
     flex-direction: column;
+
+    p {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 
@@ -341,7 +347,7 @@ export const SelectedCount = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const Img = styled(Image)`
   width: 100%;
   height:150px;
   object-fit: cover;
@@ -695,34 +701,38 @@ export const Overlay = styled.div`
 `;
 
 export const Modal = styled.div`
-width: 550px;
-background-color: transparent;
-border-radius: 1rem;
-display: flex ;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-gap: 20px;
-padding: 10px;
- animation: ${animateCardFadeIn} 0.4s ease-in-out;
-
-button{
-  align-self: flex-end;
-  font-weight: bold;
-  font-size: 19px;
+  width: 550px;
   background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
- img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: contain;
   border-radius: 1rem;
- }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  animation: ${animateCardFadeIn} 0.4s ease-in-out;
 
+  button {
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 19px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 
+  img {
+    max-height: 500px;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
 
-`
+  @media (max-width: 600px) {
+    width: 90%;
+
+    img {
+      width: 100%;
+    }
+  }
+`;
