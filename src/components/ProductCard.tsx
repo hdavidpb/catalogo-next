@@ -1,10 +1,11 @@
 'use client'
 import { useContext } from "react";
-import * as SC from "../styled-components/styles";
 import { stepsContext } from "@/context/StepsProvider";
 import { Product } from "@/context/interfaces";
 import { increaseBy, unSelectProduct, selectOrUnselectProduct, selectedImage } from "@/context/stepReducer/actions";
 import { parsePrice } from "@/utils/parsePrice";
+import * as SC from "../styled-components/styles";
+import Image from "next/image";
 
 interface Props {
   product: Product;
@@ -31,7 +32,7 @@ const handleViewImage = ()=>dispatch(selectedImage(imagen))
           <h1>{count}</h1>
         </SC.SelectedCount>
       )}
-      <SC.Image src={imagen} alt="gemela" loading="lazy" onClick={handleViewImage}/>
+      <SC.Img src={imagen} alt={nombre} width={250} height={100} onClick={handleViewImage} />
       <SC.CardDescription>
         <h4>{nombre}</h4>
         <span>{parsePrice(precio)}</span>

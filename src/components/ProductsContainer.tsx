@@ -23,7 +23,7 @@ useEffect(() => {
       {!!state.selectedImage.trim() && <ModalProduct />}
       <SC.CardsContainer>
         {stepOneProducts.filteredProducts.map((product) => (
-          <ProductCard product={product} key={product.nombre} />
+          <ProductCard product={product} key={product.imagen} />
         ))}
       </SC.CardsContainer>
     </>

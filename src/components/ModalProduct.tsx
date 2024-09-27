@@ -11,7 +11,7 @@ export const ModalProduct = () => {
     <Overlay onClick={() => dispatch(selectedImage(""))}>
       <Modal>
         <button>X</button>
-        <img src={state.selectedImage} alt="imagen de alimento" />
+        <img src={state.selectedImage} alt="Imagen completa" />
       </Modal>
     </Overlay>
   );
