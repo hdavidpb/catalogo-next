@@ -54,7 +54,7 @@ export const FooterOptions = () => {
           {/*@ts-ignore */}
           {pathName !== "/finalizar-orden" ? "Siguiente" : "Ordenar"}
           {pathName === "/finalizar-orden" && (
-            <RiWhatsappFill color="white" size={16} />
+            <RiWhatsappFill color="green" size={16} />
           )}
         </Button>
       </div>

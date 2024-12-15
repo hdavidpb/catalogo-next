@@ -16,11 +16,13 @@ export const Button = styled.button`
   color: ${({ color }: ButtonProps) => (color ? color : theme.neutral.white)};
   transition: all 0.4s;
   border-radius: 10px;
+  color: #000000;
   :hover {
     transform: scale(1.1);
   }
 
   :disabled {
     background-color: ${theme.neutral.coolGray};
+    cursor: not-allowed;
   }
 `;

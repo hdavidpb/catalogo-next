@@ -1,7 +1,7 @@
 export const theme = {
   primary: {
     marineBlue: "#010101",
-    purplishBlue: "hsl(243, 100%, 62%)",
+    purplishBlue: "hsl(0, 0.00%, 100.00%)",
     pastelBlue: "hsl(228, 100%, 84%)",
     lightBlue: "hsl(206, 94%, 87%)",
     strawberryRed: "hsl(354, 84%, 57%)",

@@ -394,7 +394,7 @@ export const CardDescription = styled.div`
 
 export const CardFooter = styled.div`
   margin: auto;
-  width: 70%;
+  width: 130px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -402,8 +402,8 @@ export const CardFooter = styled.div`
   border-radius: 10px;
   font-size: 22px;
   box-shadow: 0 0 3px 0px gray;
-
-  background-color: ${theme.neutral.magnolia};
+  color: #ffffff;
+  background-color: ${theme.primary.marineBlue};
   margin-bottom: 10px;
 
   span {
@@ -421,6 +421,7 @@ export const CardFooter = styled.div`
     outline: none;
     font-size: 1.1rem;
     background-color: transparent;
+    color: #ffffff;
     cursor: pointer;
     :first-child {
       border-radius: 10px 0 0 10px;
