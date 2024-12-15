@@ -12,7 +12,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${theme.primary.lightBlue};
+  background-color: ${theme.primary.marineBlue};
 `;
 
 export const StepFormContainer = styled.div`
@@ -22,9 +22,10 @@ export const StepFormContainer = styled.div`
   width: 90%;
   height: 93dvh;
   box-shadow: 0 5px 5px 10px #00000014;
+  border: solid 1px rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 6px;
-background-color: ${theme.neutral.white};
+  background-color: ${theme.primary.marineBlue};
   @media (max-width: 600px) {
     position: relative;
     margin: inherit;
@@ -159,8 +160,8 @@ export const FormLayout = styled.div`
     flex: 0;
     width: 98%;
     padding: 20px  5px;
-    background-color: ${theme.neutral.white};
-    border-radius: 10px;
+    background-color: ${theme.primary.marineBlue};
+    /* border-radius: 10px; */
     top: 10%;
     box-shadow: 0 5px 5px 3px #00000014;
   }
@@ -272,6 +273,8 @@ export const FooterOptions = styled.footer`
 `;
 
 export const CardsContainer = styled.div`
+  overflow-y: auto;
+  flex: 1;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -306,9 +309,10 @@ const animateCardFadeIn = keyframes`
 `;
 
 export const ProductCard = styled.div`
+background: #FFFFFF;
   position: relative;
   flex-grow: 1;
-  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -373,6 +377,7 @@ export const CardDescription = styled.div`
     color: black;
     font-weight: 600;
     font-size: 20px;
+    white-space: break-spaces;
   }
 
   span {
@@ -654,13 +659,13 @@ export const TotalContainer = styled.div`
   align-items: center;
   padding: 1rem;
   span {
-    color: ${theme.neutral.coolGray};
+    color: #ffffff;
     font-size: 1.6rem;
     font-weight: 900;
   }
 
   h3 {
-    color: ${theme.primary.marineBlue};
+    color: #ffffff;
     font-size: 1.6rem;
   }
 `;

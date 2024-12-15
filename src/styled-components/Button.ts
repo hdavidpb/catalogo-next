@@ -12,7 +12,7 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   background-color: ${({ bg }: ButtonProps) =>
-    bg ? bg : theme.primary.marineBlue};
+    bg ? bg : theme.primary.purplishBlue};
   color: ${({ color }: ButtonProps) => (color ? color : theme.neutral.white)};
   transition: all 0.4s;
   border-radius: 10px;

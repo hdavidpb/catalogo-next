@@ -5,7 +5,7 @@ import { ProductsContainer } from "@/components/ProductsContainer";
 
 const generateCatalogo = async () => {
   const URL = process.env.URL_API!;
-    const catalogo = await fetch(URL)
+    const catalogo = await fetch(URL,{cache:"no-cache",next:{revalidate:3600}})
       .then((response) => {
         return response.json();
       })
@@ -26,7 +26,6 @@ export default async function CatalogoPage() {
       <SC.FieldsContainer>
         <ProductsContainer products={products} />
       </SC.FieldsContainer>
-      
     </>
   );
 }

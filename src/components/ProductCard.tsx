@@ -25,6 +25,7 @@ export const ProductCard = ({ product }: Props) => {
     dispatch(selectOrUnselectProduct(nombre));
   };
 const handleViewImage = ()=>dispatch(selectedImage(imagen))
+
   return (
     <SC.ProductCard isSelected={isSelected! && count !== 0} key={nombre}>
       {count !== 0 && (
@@ -34,7 +35,7 @@ const handleViewImage = ()=>dispatch(selectedImage(imagen))
       )}
       <SC.Img src={imagen} alt={nombre} width={250} height={100} onClick={handleViewImage} />
       <SC.CardDescription>
-        <h4>{nombre}</h4>
+        <h4>{`${nombre} ${product.tipo.toLowerCase()==="hamburguesas" ? "\+ Papas a la francesa.":""}`} </h4>
         <span>{parsePrice(precio)}</span>
       </SC.CardDescription>
       <SC.CardFooter>
