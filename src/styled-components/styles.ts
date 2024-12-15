@@ -35,6 +35,7 @@ export const StepFormContainer = styled.div`
     box-shadow: none;
     justify-content: flex-start;
     padding: 0;
+    border: none;
   }
 `;
 interface ISidevarELement {
@@ -51,7 +52,7 @@ export const SideStepContainer = styled.div`
   height: 100%;
   /* background: url(${({ bg }: ISidevarELement) => bg}) no-repeat center
     center/cover; */
-    border-right: solid 1px white;
+  border-right: solid 1px white;
   border-radius: 10px;
   padding: 1.5rem;
   @media (max-width: 900px) {
@@ -70,7 +71,8 @@ export const SideStepContainer = styled.div`
       no-repeat center;
     background-size: 100%;
     background-position: inherit;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
+    border-radius: 0;
   }
 `;
 
