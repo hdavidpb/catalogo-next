@@ -7,10 +7,10 @@ import { FooterOptions } from "@/components/FooterOptions";
 const edunsw = Edu_NSW_ACT_Foundation({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Amarilla - catalogo",
+  title: "La hamburguesa - cátalogo",
   description:
-    "Aquí podras encontrar todo el catalogo de amarilla, hecho con mucho amor",
-  keywords: ["amarilla", "arcilla", "joyeros", "ceniceros", "porta incienso"],
+    "Aquí podras encontrar todo el catálogo de nuestras hamburguesas, hecho con mucho amor",
+  keywords: ["la hamburguesa", "hamburguesas", "comida rapida", "comida", "cali","golden"],
 };
 
 export default function RootLayout({

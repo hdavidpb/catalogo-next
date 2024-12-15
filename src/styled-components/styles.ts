@@ -280,7 +280,7 @@ export const CardsContainer = styled.div`
   gap: 10px;
   padding: 10px 5px;
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   /* @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
@@ -329,7 +329,7 @@ export const ProductCard = styled.div`
 export const SelectedCount = styled.div`
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 250px;
   top: 0;
   border-radius: 10%;
   display: flex;
@@ -343,19 +343,18 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height: 130px;
+    max-height:250px;
   }
 `;
 
 export const Img = styled(Image)`
   width: 100%;
-  height:150px;
+  height:250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   @media (max-width: 600px) {
     position: static;
-    height: auto;
-    max-height: 130px;
+
 
   }
 `;
@@ -369,15 +368,15 @@ export const CardDescription = styled.div`
   gap: 8px;
   padding: 10px;
   h4 {
-    color: ${theme.primary.marineBlue};
+    color: black;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   span {
     font-weight: 900;
-    font-size: 14px;
-    color: ${theme.neutral.coolGray};
+    font-size: 20px;
+    color: back;
     //nothing
   }
 `;
@@ -385,18 +384,20 @@ export const CardDescription = styled.div`
 export const CardFooter = styled.div`
   margin: auto;
   width: 70%;
-  height: 30px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  font-size: 22px;
+  box-shadow: 0 0 3px 0px gray;
 
   background-color: ${theme.neutral.magnolia};
   margin-bottom: 10px;
 
   span {
     flex: 1;
-    font-size: 14px;
+    
     font-weight: 900;
     text-orientation: sideways;
     text-align: center;
