@@ -347,6 +347,8 @@ export const SelectedCount = styled.div`
   }
 `;
 
+
+
 export const Img = styled(Image)`
   width: 100%;
   height:330px;
