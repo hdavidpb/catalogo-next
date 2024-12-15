@@ -49,27 +49,28 @@ export const SideStepContainer = styled.div`
   gap: 2.2rem;
   width: 270px;
   height: 100%;
-  background: url(${({ bg }: ISidevarELement) => bg}) no-repeat center
-    center/cover;
+  /* background: url(${({ bg }: ISidevarELement) => bg}) no-repeat center
+    center/cover; */
+    border-right: solid 1px white;
   border-radius: 10px;
   padding: 1.5rem;
   @media (max-width: 900px) {
     width: 180px;
-    padding: 1.5rem 5px;
+
     
   }
   @media (max-width: 600px) {
     width: 100%;
-    height: 25vh;
+    height: 85px;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: center;
-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
     background: url(${({ responsiveBg }: ISidevarELement) => responsiveBg})
       no-repeat center;
     background-size: 100%;
     background-position: inherit;
-    padding-top: 19px;
+    padding-bottom: 3px;
   }
 `;
 
@@ -95,9 +96,9 @@ export const StepContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({ isStep }: StepsProps) =>
-      isStep ? theme.primary.lightBlue : theme.primary.purplishBlue};
+      isStep ? theme.primary.marineBlue : "#FFFFFF"};
     color: ${({ isStep }: StepsProps) =>
-      isStep ? theme.primary.marineBlue : theme.neutral.white};
+      isStep ? "#FFFFFF" : theme.primary.marineBlue};
   }
 
  @media (max-width: 900px) {
@@ -110,8 +111,8 @@ export const StepContainer = styled.div`
     flex-direction: column;
 
     p {
-      width: 40px;
-      height: 40px;
+      width: 22px;
+      height: 22px;
     }
   }
 `;
@@ -334,7 +335,7 @@ background: #FFFFFF;
 export const SelectedCount = styled.div`
   position: absolute;
   width: 100%;
-  height: 330px;
+  height: 380px;
   top: 0;
   border-radius: 10%;
   display: flex;
@@ -348,7 +349,7 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height:330px;
+    max-height:380px;
   }
 `;
 
@@ -356,7 +357,7 @@ export const SelectedCount = styled.div`
 
 export const Img = styled(Image)`
   width: 100%;
-  height:330px;
+  height:380px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   @media (max-width: 600px) {
