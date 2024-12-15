@@ -56,6 +56,7 @@ export const SideStepContainer = styled.div`
   @media (max-width: 900px) {
     width: 180px;
     padding: 1.5rem 5px;
+    
   }
   @media (max-width: 600px) {
     width: 100%;
@@ -63,7 +64,7 @@ export const SideStepContainer = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    border-radius: 0;
+border-radius: 10px 10px 0 0;
     background: url(${({ responsiveBg }: ISidevarELement) => responsiveBg})
       no-repeat center;
     background-size: 100%;
