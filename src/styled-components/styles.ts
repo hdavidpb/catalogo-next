@@ -329,7 +329,7 @@ export const ProductCard = styled.div`
 export const SelectedCount = styled.div`
   position: absolute;
   width: 100%;
-  height: 250px;
+  height: 330px;
   top: 0;
   border-radius: 10%;
   display: flex;
@@ -343,13 +343,13 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height:250px;
+    max-height:330px;
   }
 `;
 
 export const Img = styled(Image)`
   width: 100%;
-  height:250px;
+  height:330px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   @media (max-width: 600px) {

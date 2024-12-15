@@ -13,7 +13,9 @@ export const FilterSection = () => {
   useFilterCategories();
 
   return (
-    <SC.FiltersTabContainer>
+    <>
+       <h1>Selecciona tu pedido:</h1>
+    {/* <SC.FiltersTabContainer>
       {stepOneProducts.categories.map((category) => (
         <SC.Li
           isSelected={category.isSelected}
@@ -23,6 +25,7 @@ export const FilterSection = () => {
           {category.type}
         </SC.Li>
       ))}
-    </SC.FiltersTabContainer>
+    </SC.FiltersTabContainer> */}
+    </>
   );
 };
