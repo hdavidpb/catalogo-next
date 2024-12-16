@@ -1,12 +1,11 @@
-'use client'
+"use client";
 
 import { theme } from "@/theme/theme";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
-
 export const MainLayout = styled.div`
-position: relative;
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -57,18 +56,16 @@ export const SideStepContainer = styled.div`
   padding: 1.5rem;
   @media (max-width: 900px) {
     width: 180px;
-
-    
   }
   @media (max-width: 600px) {
     width: 100%;
     height: 85px;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-center;
     justify-content: center;
     border-radius: 10px 10px 0 0;
-    background: url(${({ responsiveBg }: ISidevarELement) => responsiveBg})
-      no-repeat center;
+    /* background: url(${({ responsiveBg }: ISidevarELement) => responsiveBg})
+      no-repeat center; */
     background-size: 100%;
     background-position: inherit;
     padding-bottom: 8px;
@@ -89,8 +86,8 @@ export const StepContainer = styled.div`
 
   p {
     cursor: text;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: solid 1px ${theme.neutral.white};
     border-radius: 50%;
     color: ${theme.neutral.white};
@@ -98,23 +95,23 @@ export const StepContainer = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({ isStep }: StepsProps) =>
-      isStep ? theme.primary.marineBlue : "#FFFFFF"};
-    color: ${({ isStep }: StepsProps) =>
       isStep ? "#FFFFFF" : theme.primary.marineBlue};
+    color: ${({ isStep }: StepsProps) =>
+      isStep ? theme.primary.marineBlue : "#FFFFFF"};
   }
 
- @media (max-width: 900px) {
-
- font-size: 14px;
- }
+  @media (max-width: 900px) {
+    font-size: 16px;
+    font-weight: 700;
+  }
 
   @media (max-width: 600px) {
     width: auto;
     flex-direction: column;
 
     p {
-      width: 22px;
-      height: 22px;
+      width: 40px;
+      height: 40px;
     }
   }
 `;
@@ -163,7 +160,7 @@ export const FormLayout = styled.div`
     height: 85%;
     flex: 0;
     width: 98%;
-    padding: 20px  5px;
+    padding: 20px 5px;
     background-color: ${theme.primary.marineBlue};
     /* border-radius: 10px; */
     top: 10%;
@@ -205,16 +202,17 @@ interface CategoryProps {
 
 export const Li = styled.li`
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
+  width: 110px;
   padding: 8px;
   border-radius: 16px;
-  box-shadow: 0 1px 2px 2px ${theme.neutral.lightGray};
+  box-shadow: 0 0px 0px 1px ${theme.neutral.lightGray};
   list-style: none;
   color: ${theme.primary.marineBlue};
   background-color: ${({ isSelected }: CategoryProps) =>
-    isSelected ? theme.primary.marineBlue : "#FFFFFF"};
+    isSelected ?  "#FFFFFF": theme.primary.marineBlue};
   color: ${({ isSelected }: CategoryProps) =>
-    isSelected ? "#FFFFFF" : theme.primary.marineBlue};
+    isSelected ? theme.primary.marineBlue: "#FFFFFF" };
   cursor: pointer;
   transition: all 0.4s;
   :hover {
@@ -284,7 +282,7 @@ export const CardsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   padding: 10px 5px;
   @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
@@ -313,10 +311,10 @@ const animateCardFadeIn = keyframes`
 `;
 
 export const ProductCard = styled.div`
-background: #FFFFFF;
+  background: ${theme.primary.marineBlue};
+  color: #ffffff;
   position: relative;
   flex-grow: 1;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -351,21 +349,17 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height:380px;
+    max-height: 380px;
   }
 `;
 
-
-
 export const Img = styled(Image)`
   width: 100%;
-  height:380px;
+  height: 380px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   @media (max-width: 600px) {
     position: static;
-
-
   }
 `;
 
@@ -378,7 +372,7 @@ export const CardDescription = styled.div`
   gap: 8px;
   padding: 10px;
   h4 {
-    color: black;
+  
     font-weight: 600;
     font-size: 20px;
     white-space: break-spaces;
@@ -408,7 +402,7 @@ export const CardFooter = styled.div`
 
   span {
     flex: 1;
-    
+
     font-weight: 900;
     text-orientation: sideways;
     text-align: center;
@@ -693,7 +687,6 @@ export const TankYouContainers = styled.div`
     text-align: center;
   }
 `;
-
 
 //MODAL
 

@@ -6,6 +6,7 @@ import { increaseBy, unSelectProduct, selectOrUnselectProduct, selectedImage } f
 import { parsePrice } from "@/utils/parsePrice";
 import * as SC from "../styled-components/styles";
 import Image from "next/image";
+import { theme } from "@/theme/theme";
 
 interface Props {
   product: Product;
@@ -27,7 +28,7 @@ export const ProductCard = ({ product }: Props) => {
 const handleViewImage = ()=>dispatch(selectedImage(imagen))
 
   return (
-    <SC.ProductCard isSelected={isSelected! && count !== 0} key={nombre}>
+    <SC.ProductCard   isSelected={isSelected! && count !== 0} key={nombre}>
       {count !== 0 && (
         <SC.SelectedCount>
           <h1>{count}</h1>
