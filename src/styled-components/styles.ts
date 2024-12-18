@@ -7,7 +7,7 @@ import styled, { keyframes } from "styled-components";
 export const MainLayout = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ export const StepFormContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 93dvh;
+  /* height: 93dvh; */
   box-shadow: 0 5px 5px 10px #00000014;
   border: solid 1px rgba(255, 255, 255, 0.55);
   border-radius: 10px;
@@ -32,7 +32,7 @@ export const StepFormContainer = styled.div`
     position: relative;
     margin: inherit;
     width: 100%;
-    height: 100dvh;
+    /* height: 100dvh; */
     flex-direction: column;
     box-shadow: none;
     justify-content: flex-start;
@@ -361,7 +361,7 @@ export const SelectedCount = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(213deg 96% 18% / 53%);
+  background-color: hsl(0deg 0% 0% / 18%);
   border-radius: 10px 10px 0 0;
   h1 {
     color: ${theme.neutral.white};
