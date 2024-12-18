@@ -14,7 +14,7 @@ export default function FinishingOrderPage  () {
         <SC.FinishingDetailsContainer>
           <PlanFinishinDetail />
         </SC.FinishingDetailsContainer>
-        <TotalFishinUp />
+        {/* <TotalFishinUp /> */}
       </SC.FinishinUpContainer>
     </SC.FieldsContainer>
 

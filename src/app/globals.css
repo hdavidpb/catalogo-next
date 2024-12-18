@@ -17,5 +17,5 @@ body,html{
   border-radius: 20px;
 }
 ::-webkit-scrollbar-track {
-  background-color: hsl(231deg 11% 63% / 24%);
+  background-color: hsla(231, 90%, 4%, 0.327);
 }

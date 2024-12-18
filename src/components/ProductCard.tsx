@@ -28,7 +28,7 @@ export const ProductCard = ({ product }: Props) => {
 const handleViewImage = ()=>dispatch(selectedImage(imagen))
 
   return (
-    <SC.ProductCard   isSelected={isSelected! && count !== 0} key={nombre}>
+    <SC.ProductCard   key={nombre}>
       {count !== 0 && (
         <SC.SelectedCount>
           <h1>{count}</h1>

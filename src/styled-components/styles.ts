@@ -24,7 +24,10 @@ export const StepFormContainer = styled.div`
   border: solid 1px rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 6px;
-  background-color: ${theme.primary.marineBlue};
+  //background-si
+    background: url("/hamburguer-bg.webp") no-repeat center
+    center/cover;
+  /* background-color: white; */
   @media (max-width: 600px) {
     position: relative;
     margin: inherit;
@@ -59,16 +62,17 @@ export const SideStepContainer = styled.div`
   }
   @media (max-width: 600px) {
     width: 100%;
-    height: 85px;
+    height: 145px;
     flex-direction: row;
     align-items: flex-center;
     justify-content: center;
-    border-radius: 10px 10px 0 0;
+
     /* background: url(${({ responsiveBg }: ISidevarELement) => responsiveBg})
       no-repeat center; */
     background-size: 100%;
     background-position: inherit;
     padding-bottom: 8px;
+    padding-top: 8px;
     border-radius: 0;
   }
 `;
@@ -133,7 +137,13 @@ export const StepDetialContainer = styled.div`
   }
 
   @media (max-width: 600px) {
-    display: none;
+    h5 {
+      font-size: 12px;
+      text-align: center;
+    }
+    span{
+      display: none;
+    }
   }
 `;
 
@@ -160,8 +170,8 @@ export const FormLayout = styled.div`
     height: 85%;
     flex: 0;
     width: 98%;
-    padding: 20px 5px;
-    background-color: ${theme.primary.marineBlue};
+    padding: 20px 1px;
+    /* background-color: ${theme.primary.marineBlue}; */
     /* border-radius: 10px; */
     top: 10%;
     box-shadow: 0 5px 5px 3px #00000014;
@@ -202,17 +212,17 @@ interface CategoryProps {
 
 export const Li = styled.li`
   text-align: center;
-  font-size: 16px;
-  width: 110px;
+  font-size: 13px;
   padding: 8px;
-  border-radius: 16px;
-  box-shadow: 0 0px 0px 1px ${theme.neutral.lightGray};
+  border-radius: 100px;
   list-style: none;
   color: ${theme.primary.marineBlue};
   background-color: ${({ isSelected }: CategoryProps) =>
     isSelected ?  "#FFFFFF": theme.primary.marineBlue};
   color: ${({ isSelected }: CategoryProps) =>
     isSelected ? theme.primary.marineBlue: "#FFFFFF" };
+    font-weight: ${({ isSelected }: CategoryProps) =>
+    isSelected ? 900: 400 };;
   cursor: pointer;
   transition: all 0.4s;
   :hover {
@@ -240,24 +250,33 @@ export const FieldContainer = styled.div`
 
   label {
     font-size: 14px;
-    color: ${theme.primary.marineBlue};
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
   }
   input,
   select {
     width: 100%;
-    border: solid 1px ${theme.neutral.coolGray};
+    border: solid 1px white;
     padding: 15px;
     outline: none;
     border-radius: 8px;
+    height: 55px;
+    background-color: ${theme.primary.marineBlue};
+    color: white;
+
+    
   }
   textarea {
     width: 100%;
-    height: 80px;
-    border: solid 1px ${theme.neutral.coolGray};
+    height: 140px;
+    border: solid 1px white;
     padding: 15px;
     outline: none;
     border-radius: 8px;
     resize: none;
+    background-color: ${theme.primary.marineBlue};
+    color: white;
   }
 `;
 
@@ -285,7 +304,9 @@ export const CardsContainer = styled.div`
   gap: 30px;
   padding: 10px 5px;
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 10px 0;
   }
   /* @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
@@ -312,6 +333,7 @@ const animateCardFadeIn = keyframes`
 
 export const ProductCard = styled.div`
   background: ${theme.primary.marineBlue};
+  height: 100%;
   color: #ffffff;
   position: relative;
   flex-grow: 1;
@@ -319,10 +341,8 @@ export const ProductCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  box-shadow: ${({ isSelected }: ProductCardProps) =>
-    isSelected
-      ? `${theme.primary.marineBlue} 0px 2px 8px 0px`
-      : `${theme.neutral.lightGray} 0px 2px 8px 0px`};
+
+
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.4s;
@@ -335,7 +355,7 @@ export const ProductCard = styled.div`
 export const SelectedCount = styled.div`
   position: absolute;
   width: 100%;
-  height: 380px;
+  height: 120px;
   top: 0;
   border-radius: 10%;
   display: flex;
@@ -349,14 +369,14 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height: 380px;
+    max-height: 120px;
   }
 `;
 
 export const Img = styled(Image)`
   width: 100%;
-  height: 380px;
-  object-fit: cover;
+  height: 120px;
+  object-fit: contain;
   border-radius: 10px 10px 0 0;
   @media (max-width: 600px) {
     position: static;
@@ -374,13 +394,13 @@ export const CardDescription = styled.div`
   h4 {
   
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
     white-space: break-spaces;
   }
 
   span {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 14px;
     color: back;
     //nothing
   }
@@ -388,13 +408,13 @@ export const CardDescription = styled.div`
 
 export const CardFooter = styled.div`
   margin: auto;
-  width: 130px;
-  height: 50px;
+  width: 100px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 16px;
   box-shadow: 0 0 3px 0px gray;
   color: #ffffff;
   background-color: ${theme.primary.marineBlue};

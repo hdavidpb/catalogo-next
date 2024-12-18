@@ -22,7 +22,12 @@ export const Button = styled.button`
   }
 
   :disabled {
-    background-color: ${theme.neutral.coolGray};
+    background-color: gray;
     cursor: not-allowed;
+    opacity: 0.7;
+    :hover {
+      transform: none;
+
+    }
   }
 `;

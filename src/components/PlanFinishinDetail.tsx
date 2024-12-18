@@ -9,6 +9,7 @@ import { parsePrice } from "@/utils/parsePrice";
 import Link from "next/link";
 import { Product } from "@/context/interfaces";
 import { noRepeatProducts } from "@/utils/getNoRepeatProducts";
+import useGetDetailsInfo from "@/hooks/useGetDetailsInfo";
 
 export const PlanFinishinDetail = () => {
   const [finalProducts, setFinalProducts] = useState <Product[]>([]);
@@ -16,7 +17,7 @@ export const PlanFinishinDetail = () => {
 
   const { productSelected ,stepOneformValues} = state;
   const {payMethod,description,address} = stepOneformValues
-
+  const { finishinTotal } = useGetDetailsInfo();
 
 useEffect(()=>{
   setFinalProducts(noRepeatProducts(productSelected));
@@ -43,6 +44,14 @@ useEffect(()=>{
           <strong>Descripción: </strong>
           {description}.
         </span>
+        <div style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center",marginTop:"10px",fontSize:"22px"}}>
+        <span >
+          <strong>Total: </strong>
+         { finishinTotal.total}
+        </span>
+
+        </div>
+      
       </SC.OrderDescription>
       <Link href="/catalogo" onClick={() => dispatch(editProductOrder())}>
         Editar orden

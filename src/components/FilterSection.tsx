@@ -14,7 +14,7 @@ export const FilterSection = () => {
 
   return (
     <>
-    <h1 style={{color:"#FFFFFF"}}>Selecciona tu pedido:</h1>
+    <h1 style={{color:"#FFFFFF",fontSize:"16px"}}>Selecciona la cantidad de productos</h1>
     <SC.FiltersTabContainer>
       {stepOneProducts.categories.map((category) => (
         <SC.Li
