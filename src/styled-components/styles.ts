@@ -7,10 +7,10 @@ import styled, { keyframes } from "styled-components";
 export const MainLayout = styled.div`
   position: relative;
   width: 100%;
-  /* height: 100vh; */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: ${theme.primary.marineBlue};
 `;
 
@@ -19,14 +19,15 @@ export const StepFormContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
-  /* height: 93dvh; */
+  min-height: 100vh;
   box-shadow: 0 5px 5px 10px #00000014;
   border: solid 1px rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 6px;
   //background-si
-    background: url("/hamburguer-bg.webp") no-repeat center
+    background: url("/hamburguer-bg.webp") no-repeat top
     center/cover;
+    background-position: top;
   /* background-color: white; */
   @media (max-width: 600px) {
     position: relative;
@@ -49,13 +50,16 @@ export const SideStepContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  align-self: self-start;
   gap: 2.2rem;
   width: 270px;
   height: 100%;
+
+  
   /* background: url(${({ bg }: ISidevarELement) => bg}) no-repeat center
     center/cover; */
-  border-right: solid 1px white;
-  border-radius: 10px;
+
+  
   padding: 1.5rem;
   @media (max-width: 900px) {
     width: 180px;
@@ -74,6 +78,8 @@ export const SideStepContainer = styled.div`
     padding-bottom: 8px;
     padding-top: 8px;
     border-radius: 0;
+    border-bottom: dashed 1px white;
+    background-color: transparent;
   }
 `;
 
@@ -239,6 +245,7 @@ export const FieldsContainer = styled.div`
   align-items: center;
   gap: 20px;
   overflow-y: auto;
+  
 `;
 
 export const FieldContainer = styled.div`
@@ -597,7 +604,9 @@ export const FinishingDetailsContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
-  background-color: ${theme.neutral.magnolia};
+  background: rgba(255, 255, 255, 0.55);
+ -webkit-backdrop-filter: blur(5px);
+ backdrop-filter: blur(5px);
   border-radius: 10px;
   overflow-y: auto;
 `;
