@@ -7,7 +7,7 @@ import { FooterOptions } from "@/components/FooterOptions";
 const poppins = Poppins({weight:["200","700"],subsets:["latin"]});
 
 export const metadata: Metadata = {
-  title: "La hamburguesa - cátalogo",
+  title: "La hamburguesa - domicilio",
   description:
     "Aquí podras encontrar todo el catálogo de nuestras hamburguesas, hecho con mucho amor",
   keywords: ["la hamburguesa", "hamburguesas", "comida rapida", "comida", "cali","golden"],
