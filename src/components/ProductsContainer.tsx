@@ -1,22 +1,20 @@
-'use client'
-import { useContext, useEffect } from "react";
+"use client";
+import { useContext } from "react";
 import { ProductCard } from ".";
-import * as SC from "../styled-components/styles"
+import * as SC from "../styled-components/styles";
 import { stepsContext } from "@/context/StepsProvider";
 import useValidateSelectedProducts from "@/hooks/useValidateSelectedProducts";
-import { getProductsData } from "@/context/stepReducer/actions";
 import { ModalProduct } from "./ModalProduct";
 
-export const ProductsContainer = ({products}:{products:any[]}) => {
-  const { state, dispatch } = useContext(stepsContext);
+export const ProductsContainer = ({ products }: { products: any[] }) => {
+  const { state } = useContext(stepsContext);
   const { stepOneProducts } = state;
+
   useValidateSelectedProducts();
 
-useEffect(() => {
-  if(stepOneProducts.products.length === 0){
-    dispatch(getProductsData(products));
-  }
-}, [stepOneProducts.products]);
+
+
+
 
   return (
     <>
@@ -28,4 +26,4 @@ useEffect(() => {
       </SC.CardsContainer>
     </>
   );
-}
+};

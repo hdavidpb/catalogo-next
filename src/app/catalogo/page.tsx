@@ -5,7 +5,7 @@ import { ProductsContainer } from "@/components/ProductsContainer";
 
 const generateCatalogo = async () => {
   const URL = process.env.URL_API!;
-    const catalogo = await fetch(URL,{cache:"no-cache",next:{revalidate:3600}})
+    const catalogo = await fetch(URL,{cache:"no-cache",next:{revalidate:60}})
       .then((response) => {
         return response.json();
       })

@@ -18,7 +18,7 @@ export const StepFormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 1500px;
   min-height: 100vh;
   box-shadow: 0 5px 5px 10px #00000014;
   border: solid 1px rgba(255, 255, 255, 0.55);
@@ -362,7 +362,7 @@ export const ProductCard = styled.div`
 export const SelectedCount = styled.div`
   position: absolute;
   width: 100%;
-  height: 120px;
+  height: 400px;
   top: 0;
   border-radius: 10%;
   display: flex;
@@ -376,17 +376,20 @@ export const SelectedCount = styled.div`
     font-style: oblique;
   }
   @media (max-width: 600px) {
-    max-height: 120px;
+    height: 120px;
   }
 `;
 
 export const Img = styled(Image)`
   width: 100%;
-  height: 120px;
-  object-fit: contain;
+  height: 400px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
+  object-position: 50% 80%;
   @media (max-width: 600px) {
     position: static;
+    height: 120px;
+    object-fit: contain;
   }
 `;
 
@@ -719,6 +722,11 @@ export const TankYouContainers = styled.div`
 
 //MODAL
 
+
+interface OverlayProps {
+  positionTop:number
+}
+
 export const Overlay = styled.div`
   width: 100%;
   height: 100%;
@@ -726,12 +734,10 @@ export const Overlay = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #000000b0;
-  position: absolute;
+  position: fixed;
   z-index: 999;
   left: 0;
-  right: 0;
   top: 0;
-  bottom: 0;
   margin: auto;
 `;
 
@@ -742,7 +748,7 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   padding: 10px;
   animation: ${animateCardFadeIn} 0.4s ease-in-out;
