@@ -330,13 +330,54 @@ const animateCardFadeIn = keyframes`
 
 }
 
-
   100% { 
   
     transform:scale(1.1)
   }
 
 `;
+
+
+export const ShopBadgeContainer = styled.div`
+
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 100px;
+background-color: red;
+color: #ffffff;
+top: -6px;
+right: -4px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+span{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+`
+
+export const ButtonShopBadgeContainer = styled.button`
+width: 50px;
+height: 50px;
+background-color: #FFFFFF;
+border-radius: 100px;
+font-size: 20px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid 1px white;
+transition: all 0.4s;
+:hover{
+  transform:scale(1.1)
+}
+
+`
 
 export const ProductCard = styled.div`
   background: ${theme.primary.marineBlue};
@@ -368,7 +409,7 @@ export const SelectedCount = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0deg 0% 0% / 18%);
+  background-color: hsl(0deg 0% 0% / 38%);
   border-radius: 10px 10px 0 0;
   h1 {
     color: ${theme.neutral.white};
