@@ -34,7 +34,7 @@ const useGetDetailsInfo = () => {
       "\n"
     );
 
-    text += `Buenas, quisiera ordenar por favor:\n\n  ${productsText}\n\nMétodo de pago: ${payMethod}.\nDirección: ${address}.\nDescripción: ${description}.`;
+    text += `Buenas, quisiera ordenar por favor:\n${productsText}\nMétodo de pago: ${payMethod}.\nDirección: ${address}.\nDescripción: ${description}.`;
 
     dispatch(generateWappText(text));
   };
