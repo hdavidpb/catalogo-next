@@ -159,7 +159,7 @@ interface FormLayoutProps {
 
 export const FormLayout = styled.div`
   flex: 1;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: ${({ isFinished }: FormLayoutProps) =>
@@ -173,7 +173,7 @@ export const FormLayout = styled.div`
   }
 
   @media (max-width: 600px) {
-    height: 85%;
+    min-height: auto;
     flex: 0;
     width: 98%;
     padding: 20px 1px;
