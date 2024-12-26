@@ -39,13 +39,17 @@ const handleViewImage = ()=>dispatch(selectedImage(imagen))
         <h4>{`${nombre} ${product.tipo.toLowerCase()==="hamburguesas" ? "\+ Papas a la francesa.":""}`} </h4>
         <span>{parsePrice(precio)}</span>
       </SC.CardDescription>
-      <SC.CardFooter>
+      {count === 0 && ( <SC.AddButton onClick={() => handleIncreaseBy(1)}>
+        Agregar
+      </SC.AddButton>)}
+     {count !== 0 && (     <SC.CardFooter>
         <button disabled={count === 0} onClick={() => handleIncreaseBy(-1)}>
           -
         </button>
         <span>{count}</span>
         <button onClick={() => handleIncreaseBy(1)}>+</button>
-      </SC.CardFooter>
+      </SC.CardFooter>)}
+ 
     </SC.ProductCard>
   );
 };

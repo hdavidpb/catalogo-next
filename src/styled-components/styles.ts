@@ -25,9 +25,8 @@ export const StepFormContainer = styled.div`
   border-radius: 10px;
   padding: 6px;
   //background-si
-    background: url("/hamburguer-bg.webp") no-repeat top
-    center/cover;
-    background-position: top;
+  background: url("/hamburguer-bg.webp") no-repeat top center/cover;
+  background-position: top;
   /* background-color: white; */
   @media (max-width: 600px) {
     position: relative;
@@ -55,11 +54,9 @@ export const SideStepContainer = styled.div`
   width: 270px;
   height: 100%;
 
-  
   /* background: url(${({ bg }: ISidevarELement) => bg}) no-repeat center
     center/cover; */
 
-  
   padding: 1.5rem;
   @media (max-width: 900px) {
     width: 180px;
@@ -78,7 +75,6 @@ export const SideStepContainer = styled.div`
     padding-bottom: 8px;
     padding-top: 8px;
     border-radius: 0;
-    border-bottom: dashed 1px white;
     background-color: transparent;
   }
 `;
@@ -147,7 +143,7 @@ export const StepDetialContainer = styled.div`
       font-size: 12px;
       text-align: center;
     }
-    span{
+    span {
       display: none;
     }
   }
@@ -224,11 +220,10 @@ export const Li = styled.li`
   list-style: none;
   color: ${theme.primary.marineBlue};
   background-color: ${({ isSelected }: CategoryProps) =>
-    isSelected ?  "#FFFFFF": theme.primary.marineBlue};
+    isSelected ? "#FFFFFF" : theme.primary.marineBlue};
   color: ${({ isSelected }: CategoryProps) =>
-    isSelected ? theme.primary.marineBlue: "#FFFFFF" };
-    font-weight: ${({ isSelected }: CategoryProps) =>
-    isSelected ? 900: 400 };;
+    isSelected ? theme.primary.marineBlue : "#FFFFFF"};
+  font-weight: ${({ isSelected }: CategoryProps) => (isSelected ? 900 : 400)};
   cursor: pointer;
   transition: all 0.4s;
   :hover {
@@ -245,7 +240,6 @@ export const FieldsContainer = styled.div`
   align-items: center;
   gap: 20px;
   overflow-y: auto;
-  
 `;
 
 export const FieldContainer = styled.div`
@@ -271,8 +265,6 @@ export const FieldContainer = styled.div`
     height: 55px;
     background-color: ${theme.primary.marineBlue};
     color: white;
-
-    
   }
   textarea {
     width: 100%;
@@ -337,47 +329,43 @@ const animateCardFadeIn = keyframes`
 
 `;
 
-
 export const ShopBadgeContainer = styled.div`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: red;
+  color: #ffffff;
+  top: -6px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-position: absolute;
-width: 20px;
-height: 20px;
-border-radius: 100px;
-background-color: red;
-color: #ffffff;
-top: -6px;
-right: -4px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-span{
-  font-size: 12px;
-  font-weight: 700;
-}
-
-`
+  span {
+    font-size: 12px;
+    font-weight: 700;
+  }
+`;
 
 export const ButtonShopBadgeContainer = styled.button`
-width: 50px;
-height: 50px;
-background-color: #FFFFFF;
-border-radius: 100px;
-font-size: 20px;
-position: fixed;
-bottom: 20px;
-right: 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-border: solid 1px white;
-transition: all 0.4s;
-:hover{
-  transform:scale(1.1)
-}
-
-`
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 100px;
+  font-size: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  transition: all 0.4s;
+  :hover {
+    transform: scale(1.1);
+  }
+`;
 
 export const ProductCard = styled.div`
   background: ${theme.primary.marineBlue};
@@ -389,7 +377,6 @@ export const ProductCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
 
   border-radius: 10px;
   cursor: pointer;
@@ -443,7 +430,6 @@ export const CardDescription = styled.div`
   gap: 8px;
   padding: 10px;
   h4 {
-  
     font-weight: 600;
     font-size: 15px;
     white-space: break-spaces;
@@ -464,7 +450,7 @@ export const CardFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 16px;
   box-shadow: 0 0 3px 0px gray;
   color: #ffffff;
@@ -497,6 +483,21 @@ export const CardFooter = styled.div`
       border-left: solid 1px ${theme.neutral.coolGray};
     }
   }
+`;
+
+export const AddButton = styled.button`
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  margin: auto;
+  margin-bottom: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.63);
+  cursor: pointer;
 `;
 
 export const CheckContainer = styled.div`
@@ -649,8 +650,8 @@ export const FinishingDetailsContainer = styled.div`
   align-items: center;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.55);
- -webkit-backdrop-filter: blur(5px);
- backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   overflow-y: auto;
 `;
@@ -763,9 +764,8 @@ export const TankYouContainers = styled.div`
 
 //MODAL
 
-
 interface OverlayProps {
-  positionTop:number
+  positionTop: number;
 }
 
 export const Overlay = styled.div`
