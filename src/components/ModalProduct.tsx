@@ -5,6 +5,7 @@ import { useContext } from "react";
 import {Overlay,Modal} from "../styled-components/styles"
 import { selectedImage } from "@/context/stepReducer/actions";
 import { stepsContext } from "@/context/StepsProvider";
+import Image from "next/image";
 
 
 export const ModalProduct = () => {
@@ -13,7 +14,7 @@ export const ModalProduct = () => {
     <Overlay onClick={() => dispatch(selectedImage(""))} >
       <Modal>
         <button>X</button>
-        <img src={state.selectedImage} alt="Imagen completa" />
+        <Image src={state.selectedImage} alt="Imagen completa" width={350} height={500}/>
       </Modal>
     </Overlay>
   );
